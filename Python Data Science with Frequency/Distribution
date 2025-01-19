@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+pd.set_option('max_columns', 500)
+plt.style.use('ggplot')
+
+df = pd.read_csv('/content/raw_pga_536_2021.csv')
+df.shape
+
+df.loc[df['round_num'] == 1][['player_name','event_name','round_score']].head(25)
+
+from matplotlib import pyplot as plt
+_df_1['round_score'].plot(kind='line', figsize=(8, 4), title='Distribution of Scores in The Masters 2021')
+plt.gca().spines[['top', 'right']].set_visible(False)
+
+from matplotlib import pyplot as plt
+_df_0['round_score'].plot(kind='hist', bins=20, title='Frequency of Scores in The Masters 2021')
+plt.gca().spines[['top', 'right',]].set_visible(False)
+
+df.loc[df['round_score'] <= 70]['player_name'].value_counts().head(20) \
+    .sort_values() \
+    .plot(kind='barh', figsize=(12, 10),
+          title='Round Score in The Masters 2021')
+plt.show()
