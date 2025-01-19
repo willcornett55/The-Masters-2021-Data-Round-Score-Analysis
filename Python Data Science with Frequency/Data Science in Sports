@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-pd.set_option('max_columns', 500)
+# Use the full option name 'display.max_columns'
+pd.set_option('display.max_columns', 500)  
 plt.style.use('ggplot')
 
 df = pd.read_csv('/content/raw_pga_536_2021.csv')
